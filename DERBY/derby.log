@@ -1,0 +1,364 @@
+Sun May 21 19:50:54 SGT 2023 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sun May 21 19:50:54 SGT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0188-3e25-f239-000079b39af2 
+on database directory C:\Users\Suave\Desktop\OOPfinals\DERBY\UEP with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/Apache%20Derby%20db%20(10.11.1.1)/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=C:\Program Files\Java\Apache Derby db (10.11.1.1)
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Suave\Desktop\OOPfinals\DERBY
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun May 21 19:51:01 SGT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a094c023-0188-3e25-f239-000079b39af2 
+on database directory C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/Apache%20Derby%20db%20(10.11.1.1)/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=C:\Program Files\Java\Apache Derby db (10.11.1.1)
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Suave\Desktop\OOPfinals\DERBY
+----------------------------------------------------------------
+Sun May 21 19:51:01 SGT 2023:
+Shutting down instance a094c023-0188-3e25-f239-000079b39af2 on database directory C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Sun May 21 19:51:01 SGT 2023 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ040: Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 16 more
+Caused by: ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (2) ===========
+Cleanup action completed
+Sun May 21 19:51:01 SGT 2023 Thread[DRDAConnThread_3,5,main] (DATABASE = Diomerdb), (DRDAID = {2}), Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+Sun May 21 19:51:01 SGT 2023 Thread[DRDAConnThread_3,5,main] (DATABASE = Diomerdb), (DRDAID = {2}), Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+----------------------------------------------------------------
+Sun May 21 19:51:10 SGT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance d89d8024-0188-3e25-f239-000079b39af2 
+on database directory C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/Apache%20Derby%20db%20(10.11.1.1)/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=C:\Program Files\Java\Apache Derby db (10.11.1.1)
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Suave\Desktop\OOPfinals\DERBY
+----------------------------------------------------------------
+Sun May 21 19:51:10 SGT 2023:
+Shutting down instance d89d8024-0188-3e25-f239-000079b39af2 on database directory C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Sun May 21 19:51:10 SGT 2023 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ040: Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 16 more
+Caused by: ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+ERROR XSLAN: Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.readControlFile(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.bootLogFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.data.BaseDataFileFactory.setRawStoreFactory(Unknown Source)
+	at org.apache.derby.impl.store.raw.RawStore.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.FileMonitor.startModule(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (2) ===========
+Cleanup action completed
+Sun May 21 19:51:10 SGT 2023 Thread[DRDAConnThread_3,5,main] (DATABASE = Diomerdb), (DRDAID = {3}), Failed to start database 'Diomerdb' with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa, see the next exception for details.
+Sun May 21 19:51:10 SGT 2023 Thread[DRDAConnThread_3,5,main] (DATABASE = Diomerdb), (DRDAID = {3}), Database at C:\Users\Suave\Desktop\OOPfinals\DERBY\Diomerdb has an incompatible format with the current version of the software.  The database was created by or upgraded by version 10.14.
+----------------------------------------------------------------
+Sun May 21 19:55:31 SGT 2023: Shutting down Derby engine
